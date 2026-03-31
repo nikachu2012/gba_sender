@@ -69,10 +69,8 @@ python sender.py template_mb.gba /dev/tty.usbserial-XXXXX
 送信テスト用のプログラムを用意しています（`template_mb.gba`）。
 
 > [!NOTE]
-> シリアルポートの一覧は以下のコマンドで表示することができます。
-> ```
-> $ cargo run -- list
-> ```
+> シリアルポートはArduino IDEを用いて検索するのがおすすめです。
+
 
 ### ROMのダンプ
 
