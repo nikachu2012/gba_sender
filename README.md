@@ -58,7 +58,8 @@ DevkitARMを使用している場合は、Makefileのターゲット名の最後
 +TARGET		:= $(notdir $(CURDIR))_mb
 ```
 
-以下のコマンドで送信することができます。
+ROMの刺さっていない状態でGBAを起動します。
+その後、以下のコマンドで送信することができます。
 
 ```bash
 python sender.py <input.gba> <serial-port>
@@ -74,9 +75,9 @@ python sender.py template_mb.gba /dev/tty.usbserial-XXXXX
 
 ### ROMのダンプ
 
-8MiBのROM（ポケットモンスター サファイア）で30分ほどかかります。気長に待ってください。
+ダンプしたいROMをGBA本体に差した状態で起動し、起動画面でSTART+SELECTを同時押しします。
 
-途中でスリープ等が入ると止まったりすることがあります。
+画面のNintendoロゴが消えた状態で、以下のコマンドを実行します。
 
 > [!NOTE]
 > ROMをダンプするには、実行しているディレクトリと同じディレクトリに、`gba_sender_mb.gba`が置かれている必要があります。
@@ -88,7 +89,14 @@ python dumprom.py <output.gba> <serial-port>
 python dumprom.py game_dump.gba /dev/tty.usbserial-XXXXX
 ```
 
+8MiBのROM（ポケットモンスター サファイア）で30分ほどかかります。気長に待ってください。
+
+途中でスリープ等が入ると止まったりすることがあります。スリープしないように設定することをお勧めします。
+
 ### BIOSのダンプ
+
+ROMの刺さっていない状態でGBAを起動します。
+その後、以下のコマンドでダンプすることができます。
 
 > [!NOTE]
 > BIOSをダンプするには、実行しているディレクトリと同じディレクトリに、`gba_sender_mb.gba`が置かれている必要があります。
