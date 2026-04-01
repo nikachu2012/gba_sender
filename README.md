@@ -79,15 +79,15 @@ python sender.py template_mb.gba /dev/tty.usbserial-XXXXX
 
 画面のNintendoロゴが消えた状態で、以下のコマンドを実行します。
 
-> [!NOTE]
-> ROMをダンプするには、実行しているディレクトリと同じディレクトリに、`gba_sender_mb.gba`が置かれている必要があります。
-> クローンした状態のままなら気にする必要はありません。
-
 ```bash
 python dumprom.py <output.gba> <serial-port>
 # 例
 python dumprom.py game_dump.gba /dev/tty.usbserial-XXXXX
 ```
+
+> [!NOTE]
+> ROMをダンプするには、実行しているディレクトリと同じディレクトリに、`gba_sender_mb.gba`が置かれている必要があります。
+> クローンした状態のままなら気にする必要はありません。
 
 8MiBのROM（ポケットモンスター サファイア）で30分ほどかかります。気長に待ってください。
 
@@ -98,15 +98,15 @@ python dumprom.py game_dump.gba /dev/tty.usbserial-XXXXX
 ROMの刺さっていない状態でGBAを起動します。
 その後、以下のコマンドでダンプすることができます。
 
-> [!NOTE]
-> BIOSをダンプするには、実行しているディレクトリと同じディレクトリに、`gba_sender_mb.gba`が置かれている必要があります。
-> クローンした状態のままなら気にする必要はありません。
-
 ```bash
 python dumpbios.py <output.bin> <serial-port>
 # 例
 python dumpbios.py gba_bios.bin /dev/tty.usbserial-XXXXX
 ```
+
+> [!NOTE]
+> BIOSをダンプするには、実行しているディレクトリと同じディレクトリに、`gba_sender_mb.gba`が置かれている必要があります。
+> クローンした状態のままなら気にする必要はありません。
 
 ## スクリプト以外のビルド方法
 
